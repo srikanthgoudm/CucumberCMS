@@ -4,9 +4,12 @@ import com.opera.core.systems.OperaDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.safari.SafariDriver;
@@ -52,26 +55,22 @@ public abstract class BrowserFactory extends BaseClass {
 
     protected static WebDriver startRemoteWebBrowser(String browser, String URL) {
 
-        if (true) {
+        if (false) {
             try {
 
                 System.out.println("grid started...");
                 // Create an object for Desired Capabilities
 //                System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
                 DesiredCapabilities caps=DesiredCapabilities.firefox();
-////                DesiredCapabilities caps = new DesiredCapabilities();
-//                caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+                caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
                 caps.setCapability("version", "3.0");
                 caps.setCapability("platform", "Windows 8");
-//                caps.setCapability("browserName",System.getProperty("browser"));
-//                caps.setCapability("browserName","firefox");
-
                 // Create the connection to Sauce Labs to run the tests
 //                driver = new RemoteWebDriver(new URL("http://timeoutdigital:b6315b1b-3640-4a38-aa72-54c4fa2ca570@ondemand.saucelabs.com:80/wd/hub"), caps);
 //                Selenium grid URL when accessed from Jenkins (ci02)
-              driver = new RemoteWebDriver(new URL("http://selenium02:4444/wd/hub"), caps);
+              driver = new RemoteWebDriver(new URL(LoadProps.getProperty("selgrid")), caps);
 //                Jenkins (ci02) selenium grid URL when accessed from outside Jenkins (comment-out to use local grid)
-//                driver = new RemoteWebDriver(new URL("http://10.10.61.113:4444/wd/hub"), caps);
+//                driver = new RemoteWebDriver(new URL(LoadProps.getProperty("selgrid1")), caps);
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
@@ -83,13 +82,21 @@ public abstract class BrowserFactory extends BaseClass {
                     firefoxprofile.setAssumeUntrustedCertificateIssuer(true);
                     firefoxprofile.setAcceptUntrustedCertificates(true);
                     driver = new FirefoxDriver(firefoxprofile);
-                } else if (browser.equalsIgnoreCase("chrome")) {
+                } else if (browser.equalsIgnoreCase("Chrome")) {
 
-                    System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
-                    driver = new ChromeDriver();
+//                    System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
+                    System.setProperty("webdriver.chrome.driver", "src/main/Browsers/chromedriver.exe");
+//                    driver = new ChromeDriver();
+                    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("test-type");
+                    capabilities.setCapability("chrome.binary","src/main/Browsers/chromedriver.exe");
+                    capabilities.setCapability(ChromeOptions.CAPABILITY, options);
+
+                    driver = new ChromeDriver(capabilities);
 
                 } else if (browser.equalsIgnoreCase("IE")) {
-                    System.setProperty("webdriver.ie.driver", "C:\\Automation\\IEDriverServer.exe");
+                    System.setProperty("webdriver.ie.driver", "src/main/Browsers/IEDriverServer.exe");
                     driver = new InternetExplorerDriver();
                 } else if (browser.equalsIgnoreCase("Safari")) {
                     driver = new SafariDriver();

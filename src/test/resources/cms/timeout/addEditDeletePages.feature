@@ -36,9 +36,9 @@ Feature: Add Feature Page,Feature Package and Edit,Delete a Feature Page in CMS
 #      |TestHubPageCroatia|CroatiaHubPage |TestSubTitle|Croatia| British English  | Hub |
 #      |TestFeaturePageCroatia|CroatiaFeaturePage |TestSubTitle|Croatia| British English  | Feature |
 #      |TestFeaturePackageCroatia|CroatiaFeaturePackage |TestSubTitle|Croatia| British English  | Package |
-#      |TestFeaturePageLuanda|LuandaFeaturePage|TestSubTitle|Angola - Luanda|Portuguese|Feature|
-#      |TestHubPageLuanda|LuandaHubPage|TestSubTitle|Angola - Luanda|Portuguese|Hub|
-#      |TestFeaturePackageLuanda|LuandaFeaturePackage|TestSubTitle|Angola - Luanda| Portuguese  | Package |
+      |TestFeaturePageLuanda|LuandaFeaturePage|TestSubTitle|Angola - Luanda|Portuguese|Feature|
+      |TestHubPageLuanda|LuandaHubPage|TestSubTitle|Angola - Luanda|Portuguese|Hub|
+      |TestFeaturePackageLuanda|LuandaFeaturePackage|TestSubTitle|Angola - Luanda| Portuguese  | Package |
 #      |TestHubPageHongKong|HongKongHubPage |TestSubTitle|Hong Kong| British English  | Hub |
 #      |TestFeaturePageHongKong|HongKongFeaturePage |TestSubTitle|Hong Kong| British English  | Feature |
 #      |TestFeaturePackageHongKong|HongKongFeaturePackage |TestSubTitle|Hong Kong| British English  | Package |
@@ -117,8 +117,8 @@ Feature: Add Feature Page,Feature Package and Edit,Delete a Feature Page in CMS
 #    |NashvilleFeaturePage|US - Nashville|Deleting This Page|Deleted |
 #    |CroatiaFeaturePage|Croatia|Modified Test Sub Title|Complete |
 #    |CroatiaFeaturePage|Croatia|Deleting This Page|Deleted |
-#    |LuandaFeaturePage|Angola - Luanda|Modified Test Sub Title|Complete |
-#    |LuandaFeaturePage|Angola - Luanda|Deleting This Page|Deleted |
+    |LuandaFeaturePage|Angola - Luanda|Modified Test Sub Title|Complete |
+    |LuandaFeaturePage|Angola - Luanda|Deleting This Page|Deleted |
 #    |HongKongFeaturePage|Hong Kong|Modified Test Sub Title|Complete |
 #    |HongKongFeaturePage|Hong Kong|Modified Test Sub Title|Deleted |
 #    |TokyoFeaturePage-English|Japan - Tokyo|Modified Test Sub Title|Complete |

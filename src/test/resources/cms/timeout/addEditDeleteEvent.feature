@@ -26,7 +26,7 @@ Examples:
 #  |Japan - Tokyo|American English|AutoTestEventTokyo|
 #  |US - Nashville |American English  |AutoTestEventNashville|
 #  |Croatia |British English|AutoTestEventCroatia|
-#  |Angola - Luanda |Portuguese|AutoTestEventLuanda |
+  |Angola - Luanda |Portuguese|AutoTestEventLuanda |
 #  |Hong Kong |British English|AutoTestEventHongKong|
 #  |Japan - Tokyo|American English|AutoTestEventTokyo-English|
 #  |Japan - Tokyo|Japanese|AutoTestEventTokyo-JP|
@@ -72,8 +72,8 @@ Examples:
 #    |AutoTestEventCroatia|Croatia|Deleted|
 #    |AutoTestEventHongKong|Hong Kong|Complete|
 #    |AutoTestEventHongKong|Hong Kong|Deleted|
-#    |AutoTestEventLuanda|Angola - Luanda|Complete|
-#    |AutoTestEventLuanda|Angola - Luanda|Deleted|
+    |AutoTestEventLuanda|Angola - Luanda|Complete|
+    |AutoTestEventLuanda|Angola - Luanda|Deleted|
 #    |AutoTestEventTokyo-English|Japan - Tokyo|Complete|
 #    |AutoTestEventTokyo-English|Japan - Tokyo|Deleted|
 #    |AutoTestEventTokyo-JP|Japan - Tokyo|Complete|

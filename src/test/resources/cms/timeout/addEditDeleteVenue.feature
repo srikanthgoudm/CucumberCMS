@@ -27,7 +27,7 @@ Examples:
 #  |Japan - Tokyo|Japanese|JapaneseVenueTokyo|Tokyo|
 #  |US - Nashville |American English|AutoTestVenueNashville|Nashville|
 #  |Croatia |British English|AutoTestVenueCroatia|Croatia|
-#  |Angola - Luanda|Portuguese|AutoTestVenueLuanda|Luanda|
+  |Angola - Luanda|Portuguese|AutoTestVenueLuanda|Luanda|
 #  |Hong Kong |British English|AutoTestVenueHongKong|Hong Kong|
  #     US 14 cities Configurations
 #  |US - Cleveland |American English|AutoTestVenueCleveland|Cleveland|
@@ -67,8 +67,8 @@ Examples:
 #  |AutoTestVenueCroatia|Croatia|Deleted |
 #  |AutoTestVenueNashville|US - Nashville|Complete|
 #  |AutoTestVenueNashville|US - Nashville|Deleted |
-#  |AutoTestVenueLuanda|Angola - Luanda|Complete|
-#  |AutoTestVenueLuanda|Angola - Luanda|Deleted|
+  |AutoTestVenueLuanda|Angola - Luanda|Complete|
+  |AutoTestVenueLuanda|Angola - Luanda|Deleted|
 #  |AutoTestVenueHongKong|Hong Kong|Complete|
 #  |AutoTestVenueHongKong|Hong Kong|Deleted|
 #  |EnglishVenueTokyo|Japan - Tokyo |Complete|

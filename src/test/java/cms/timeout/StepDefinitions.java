@@ -44,7 +44,7 @@ public class StepDefinitions {
     @Before
     public void StartBrowser()throws MalformedURLException,InterruptedException {
         try {
-            BrowserFactory.StartBrowser("Firefox", URL);
+            BrowserFactory.StartBrowser(LoadProps.getProperty("browser"), URL);
             driver = BrowserFactory.driver;
         } catch (Exception e) {
             e.printStackTrace();
@@ -189,6 +189,7 @@ public void onVenuesPage() {
          Format formatter = new SimpleDateFormat("MMM d, YYYY");
         String currentDate = formatter.format(new Date());
         System.out.println(currentDate);
+        driver.findElement(By.id("venueEdit_posted_at")).clear();
         driver.findElement(By.id("venueEdit_posted_at")).sendKeys(currentDate);
     }
 
