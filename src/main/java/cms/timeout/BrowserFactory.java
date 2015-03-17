@@ -2,6 +2,7 @@ package cms.timeout;
 
 import com.opera.core.systems.OperaDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -55,16 +56,16 @@ public abstract class BrowserFactory extends BaseClass {
 
     protected static WebDriver startRemoteWebBrowser(String browser, String URL) {
 
-        if (false) {
+        if (true) {
             try {
 
                 System.out.println("grid started...");
                 // Create an object for Desired Capabilities
 //                System.setProperty("webdriver.chrome.driver", "C:\\Automation\\chromedriver.exe");
                 DesiredCapabilities caps=DesiredCapabilities.firefox();
-                caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-                caps.setCapability("version", "3.0");
-                caps.setCapability("platform", "Windows 8");
+//                caps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+                caps.setCapability("platform", "VISTA");
+                caps.setCapability("version", "");
                 // Create the connection to Sauce Labs to run the tests
 //                driver = new RemoteWebDriver(new URL("http://timeoutdigital:b6315b1b-3640-4a38-aa72-54c4fa2ca570@ondemand.saucelabs.com:80/wd/hub"), caps);
 //                Selenium grid URL when accessed from Jenkins (ci02)
